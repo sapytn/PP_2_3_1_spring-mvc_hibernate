@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <style>
+    /*div {*/
+    /*  max-width: 1000px;*/
+    /*  margin-left: auto;*/
+    /*  margin-right: auto;*/
+    /*  margin: auto;*/
+    /*}*/
+  </style>
+  <meta charset="UTF-8">
+  <title>User Info</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h2 class="display-2">User info</h2>
+  <br>
+    <form action="/add" method="post">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+<!--        <input type="text" name="userName" value="James" th:value="${user.setName()}" />-->
+<!--        <input type="text" name="name" th:value="${user.setName()}" class="form-control">-->
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Surname</label>
+<!--        <input type="text" name="userSurname" value="Carrot" th:value="${user.setSurname()}" />-->
+
+        <!--        <input type="text" th:value="${user.setSurname()()}" class="form-control" id="surname">-->
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Year</label>
+<!--        <input type="text" name="userYear" value="1996" th:value="${user.setYearOfBirth()}" />-->
+
+        <!--        <input type="number" th:value="${user.setYearOfBirth()()}" class="form-control" id="year"/>-->
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>
