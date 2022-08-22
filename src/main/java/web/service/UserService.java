@@ -9,4 +9,6 @@ public interface UserService {
 
   public List<User> getUsers();
 
+  public User show(int id);
+
 }

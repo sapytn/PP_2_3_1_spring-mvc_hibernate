@@ -24,4 +24,11 @@ public class UserServiceImpl implements UserService {
   public List<User> getUsers() {
     return userDAO.getUsers();
   }
+
+  @Transactional
+
+  @Override
+  public User show(int id) {
+    return userDAO.show(id);
+  }
 }

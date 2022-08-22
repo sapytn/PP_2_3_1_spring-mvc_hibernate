@@ -37,8 +37,8 @@
         <td th:text="${user.getSurname()}"/>
         <td th:text="${user.getYearOfBirth()}"/>
         <td>
-          <a th:href="@{'/edit'}">edit</a>
-          <a th:href="@{'/delete'}">delete</a>
+          <a th:href="@{'users/edit'}">edit</a>
+          <a th:href="@{'users/delete'}">delete</a>
         </td>
       </tr>
       </tbody>
@@ -48,7 +48,7 @@
   <br>
 
   <input type="button" value="add new user" class="btn btn-primary"
-         onclick="window.location.href = 'addUser'"/>
+         onclick="window.location.href = 'users/addUser'"/>
 </div>
 
 </body>
