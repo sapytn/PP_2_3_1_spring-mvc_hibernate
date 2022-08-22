@@ -5,10 +5,11 @@ import web.model.User;
 
 public interface UserService {
 
-  public void add(User user);
+  public void saveUser(User user);
+  public void deleteUser(Long id);
 
   public List<User> getUsers();
 
-  public User show(int id);
+  public User show(Long id);
 
 }

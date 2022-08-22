@@ -36,25 +36,23 @@ public class UsersController {
     }
 
     @PostMapping()
-    public String newUser(@ModelAttribute("user") User user) {
-        userService.add(user);
+    public String saveUser(@ModelAttribute("user") User user) {
+        userService.saveUser(user);
         return "redirect:/users";
     }
 
+
     @GetMapping("/edit/{id}")
-    public String editUser(@PathVariable("id") int id, Model model) {
-        model.addAttribute("person", userService.show(id));
-        return "edit-user";
+    public String editUser(@PathVariable("id") long id, Model model) {
+        model.addAttribute("user", userService.show(id));
+        return "user-info";
     }
 
-    @GetMapping(value = "/index")
-    public String printWelcome(ModelMap model) {
-        List<String> messages = new ArrayList<>();
-        messages.add("Hello!");
-        messages.add("I'm Spring MVC application");
-        messages.add("5.2.0 version by sep'19 ");
-        model.addAttribute("messages", messages);
-        return "index";
+    @GetMapping("/delete/{id}")
+    public String deleteUser(@PathVariable("id") long id) {
+        userService.deleteUser(id);
+        return "redirect:/users";
     }
+
 
 }

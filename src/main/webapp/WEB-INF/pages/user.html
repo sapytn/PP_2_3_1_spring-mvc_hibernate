@@ -37,8 +37,8 @@
         <td th:text="${user.getSurname()}"/>
         <td th:text="${user.getYearOfBirth()}"/>
         <td>
-          <a th:href="@{'users/edit'}">edit</a>
-          <a th:href="@{'users/delete'}">delete</a>
+          <a th:href="@{users/edit/{id}(id=${user.getId()})}">edit</a>
+          <a th:href="@{users/delete/{id}(id=${user.getId()})}">delete</a>
         </td>
       </tr>
       </tbody>

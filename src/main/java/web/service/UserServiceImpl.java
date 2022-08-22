@@ -15,8 +15,14 @@ public class UserServiceImpl implements UserService {
 
   @Transactional
   @Override
-  public void add(User user) {
-    userDAO.add(user);
+  public void saveUser(User user) {
+    userDAO.saveUser(user);
+  }
+
+  @Transactional
+  @Override
+  public void deleteUser(Long id) {
+    userDAO.deleteUser(id);
   }
 
   @Transactional
@@ -26,9 +32,8 @@ public class UserServiceImpl implements UserService {
   }
 
   @Transactional
-
   @Override
-  public User show(int id) {
+  public User show(Long id) {
     return userDAO.show(id);
   }
 }
